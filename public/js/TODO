@@ -1,0 +1,5 @@
+x - Consider a url shortner for the really long links
+x - Everything must have a Name, URL & Description or it's not ready
+x - Pre-compile Handlebars templates
+x - Note direct downloads when they are the only thing available. (currently jXHR) 
+x - What's the difference between code and download? Which do you want to provide a link to or both?

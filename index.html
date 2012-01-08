@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<noscript><meta http-equiv="refresh" content="0; URL=/noscript.html" /></noscript>
+	<title>JS Resources</title>
+	
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+    
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" type="text/javascript"></script>
+	<script src="js/handlebars.1.0.0.beta.3.js" type="text/javascript"></script>
+	<script src="js/dashboard.min.js" type="text/javascript"></script>
+	<script src="js/cssua.min.js" type="text/javascript"></script>
+	<script src="js/resources.js" type="text/javascript"></script>
+	<script src="js/app.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div id="info"><img src="img/info.png" alt="Info"></div>
+<script id="section" type="text/x-handlebars-template">
+{{#each section}}
+<div class="jdash-item">
+	<h1 class="jdash-head">{{ category }}</h1>
+	<div class="jdash-body">
+        <div class="resources">
+        	{{#each item}}
+        	<div class="item">
+        		<div class="item_handle">
+        			<span class="item_title{{#if status}} {{status}}{{/if}}">{{ name }}</span>
+        		</div>
+				
+        		<div class="additional_info">
+	        		<div class="description">{{ description }}</div>
+	        		
+	        		<div class="row project_url">
+	        			<div class="descriptor">URL:</div>
+	        			<div class="data"><a href="//{{ url }}" class="link">{{ url }}</a></div>
+	        		</div>
+	        		
+	        		<div class="row demo">
+	        			<div class="descriptor">Demo:</div>
+	        			<div class="data">{{#if demo}}<a href="//{{ demo }}">{{ demo }}</a>{{else}}None{{/if}}</div>
+	        		</div>
+	        		
+	        		<div class="row code">
+	        			<div class="descriptor">Code:</div>
+	        			<div class="data">{{#if code}}<a href="//{{ code }}">{{ code }}</a>{{else}}None{{/if}}</div>
+	        		</div>
+	        		
+	    			<div class="row license">
+	    				<div class="descriptor">License:</div>
+	    				<div class="data">{{#if license}}{{ license }}{{else}}Unknown{{/if}}</div>
+	    			</div>
+
+	    			<div class="row dependencies">
+	    				<div class="descriptor">Dependencies:</div>
+	    				<div class="data">{{#if dependencies}}{{ dependencies }}{{else}}None{{/if}}</div>
+	    			</div>
+    			</div>
+    		</div>
+    		{{/each}}
+        </div>
+	</div>
+</div>
+{{/each}}
+</script>
+
+<div id="wrapper">	
+	<div class="jdash-item">
+		<h1 class="jdash-head">
+			About
+			<div class="jdash-toolbar">
+				<button>Report a Broken Link</button>
+				<button>Suggest a Library</button>
+			</div>
+		</h1>
+		<div class="jdash-body">
+			<b>Note:</b> This website is currently a work in progress. If you've stumbled across it somehow, be aware it may be inaccurate or incomplete. I'm aiming to launch by the end of Jan 2012 so please check back then.
+		</div>
+	</div>
+	
+	<div id="content"></div>
+</div><!-- end #wrapper -->
+</body>
+</html>

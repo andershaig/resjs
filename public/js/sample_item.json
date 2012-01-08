@@ -1,0 +1,16 @@
+{
+ "category":"Empty",
+ "item":[
+    {
+       "name":"",
+       "description":"",
+       "status":"active",
+       "url":"",
+       "demo":"",
+       "code":"",
+       "license":"",
+       "license_url":"",
+       "dependencies":""
+    }
+ ]
+}
