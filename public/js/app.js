@@ -1,5 +1,5 @@
 $(function() {
-	var template = Handlebars.template.resources;
+	var template = Handlebars.templates['resources'];
 	$("#content").replaceWith(template(res_data));
 	$("#wrapper").dashboard({ columns: 3 });
 });
