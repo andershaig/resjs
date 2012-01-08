@@ -1,0 +1,45 @@
+{{#each section}}
+<div class="jdash-item">
+	<h1 class="jdash-head">{{ category }}</h1>
+	<div class="jdash-body">
+        <div class="resources">
+        	{{#each item}}
+        	<div class="item">
+        		<div class="item_handle">
+        			<span class="item_title{{#if status}} {{status}}{{/if}}">{{ name }}</span>
+        		</div>
+				
+        		<div class="additional_info">
+	        		<div class="description">{{ description }}</div>
+	        		
+	        		<div class="row project_url">
+	        			<div class="descriptor">URL:</div>
+	        			<div class="data"><a href="//{{ url }}" class="link">{{ url }}</a></div>
+	        		</div>
+	        		
+	        		<div class="row demo">
+	        			<div class="descriptor">Demo:</div>
+	        			<div class="data">{{#if demo}}<a href="//{{ demo }}">{{ demo }}</a>{{else}}None{{/if}}</div>
+	        		</div>
+	        		
+	        		<div class="row code">
+	        			<div class="descriptor">Code:</div>
+	        			<div class="data">{{#if code}}<a href="//{{ code }}">{{ code }}</a>{{else}}None{{/if}}</div>
+	        		</div>
+	        		
+	    			<div class="row license">
+	    				<div class="descriptor">License:</div>
+	    				<div class="data">{{#if license}}{{ license }}{{else}}Unknown{{/if}}</div>
+	    			</div>
+
+	    			<div class="row dependencies">
+	    				<div class="descriptor">Dependencies:</div>
+	    				<div class="data">{{#if dependencies}}{{ dependencies }}{{else}}None{{/if}}</div>
+	    			</div>
+    			</div>
+    		</div>
+    		{{/each}}
+        </div>
+	</div>
+</div>
+{{/each}}
