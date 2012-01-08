@@ -1,5 +1,6 @@
-$(function() {
-	$("#content").replaceWith(Handlebars.templates.resources(res_data));
+$(document).ready( function () {
+	var res = Handlebars.templates.resources(res_data);
+	$("#content").replaceWith(res);
 	$("#wrapper").dashboard({ columns: 3 });
 });
 
