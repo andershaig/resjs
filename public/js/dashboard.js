@@ -62,9 +62,9 @@
 		
 		// the default options
 		var defaults = {
-			columns: 2,
+			columns: 3,
 			columnWidth: null,
-			dragOpacity: 0.65,
+			dragOpacity: 0.8,
 			showSector: true
 		}
 		

@@ -285,12 +285,8 @@ td.jdash-column { vertical-align: top; }
 
 /* Item Toolbar */
 .jdash-toolbar {
-	padding: 6px 2px;
-	margin: 0 7px;
 	font-weight: normal;
-	color: #555555;
-	border-top: 1px solid #DDDDDD;
-	font-family: Calibri, Verdana, Arial, sans-serif;
+	color: #555;
 	font-size: 12px;
 	text-shadow: none;
 }
